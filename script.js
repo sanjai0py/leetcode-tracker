@@ -1,5 +1,3 @@
-// import axios from "axios";
-// import Chart from "chart.js/auto";
 
 let leetcode_name = [
   "sanjai0py",
