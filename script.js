@@ -5,6 +5,11 @@ let leetcode_name = [
   "sathasivam2001",
   "Aribaskar_j_b",
   "PurujitKG",
+  "vasanthravi21",
+  "tkksctwo",
+  "nrknawinrajkumar888",
+  "rdevanshshukla26",
+  "bhuvaneshwarii026"
 ];
 
 const ctx = document.getElementById("myChart");
