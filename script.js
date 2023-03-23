@@ -1,7 +1,6 @@
-
 let leetcode_name = [
   "sanjai0py",
-  "Pragadesh-45",
+  // "Pragadesh-45",
   "sathasivam2001",
   "Aribaskar_j_b",
   "PurujitKG",
@@ -9,10 +8,14 @@ let leetcode_name = [
   "tkksctwo",
   "nrknawinrajkumar888",
   "rdevanshshukla26",
-  "bhuvaneshwarii026"
+  "bhuvaneshwarii026",
 ];
 
 const ctx = document.getElementById("myChart");
+// Chart.defaults.backgrou;
+// ndColor = "#9BD0F5";
+// // Chart.defaults.borderColor = "#36A2EB";
+// Chart.defaults.color = "#000";
 
 let leetcode = leetcode_name.map((v) =>
   axios.get(`https://leetcode-stats-api.herokuapp.com/${v}`)
@@ -24,6 +27,7 @@ const val = Promise.all(leetcode)
   })
   .then(function (result) {
     let totalSolved = result.map((val) => val.totalSolved);
+    console.log(totalSolved);
 
     new Chart(ctx, {
       type: "bar",
@@ -31,19 +35,25 @@ const val = Promise.all(leetcode)
         labels: leetcode_name,
         datasets: [
           {
-            label: "# of Solved",
+            label: "# of Problem Solved",
             data: totalSolved,
             borderWidth: 1,
           },
         ],
       },
+
       options: {
         scales: {
           y: {
             max: 300,
-            beginAtZero: true,
+            beginAtZero: fasle,
           },
         },
+        // plugins: {
+        //   customCanvasBackgroundColor: {
+        //     color: "Black",
+        //   },
+        // },
       },
     });
   })
