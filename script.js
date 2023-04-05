@@ -12,10 +12,6 @@ let leetcode_name = [
 ];
 
 const ctx = document.getElementById("myChart");
-// Chart.defaults.backgrou;
-// ndColor = "#9BD0F5";
-// // Chart.defaults.borderColor = "#36A2EB";
-// Chart.defaults.color = "#000";
 
 let leetcode = leetcode_name.map((v) =>
   axios.get(`https://leetcode-stats-api.herokuapp.com/${v}`)
@@ -46,14 +42,9 @@ const val = Promise.all(leetcode)
         scales: {
           y: {
             max: 300,
-            beginAtZero: fasle,
+            beginAtZero: false,
           },
         },
-        // plugins: {
-        //   customCanvasBackgroundColor: {
-        //     color: "Black",
-        //   },
-        // },
       },
     });
   })
