@@ -7,7 +7,7 @@ let leetcode_name = [
   "vasanthravi21",
   "tkksctwo",
   "nrknawinrajkumar888",
-  "rdevanshshukla26",
+  "dev-ansh-r",
   "bhuvaneshwarii026",
 ];
 
